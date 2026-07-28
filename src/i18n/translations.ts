@@ -50,8 +50,8 @@ const dict = {
     en: "Each product solves one real bottleneck",
   },
   "products.subtitle": {
-    vi: "Dùng riêng lẻ hoặc kết hợp cả hai để trang nội dung đẹp hơn và khách ghé thăm được chăm sóc ngay lập tức.",
-    en: "Use them on their own or together, so your content looks sharp and every visitor gets tended to right away.",
+    vi: "Dùng riêng lẻ hoặc kết hợp cả hai để trang nội dung đẹp hơn và khách ghé thăm được chăm sóc ngay lập tức. Nỗi đau của khách hàng: trình soạn thảo WordPress đơn giản, thiếu tính nhất quán, không tạo được các button chuyển đổi, nội dung hay nhưng khách hàng không liên hệ. Bài viết trên cùng nhưng không có cuộc gọi, email hỏi nhu cầu.",
+    en: "Use them on their own or together, so your content looks sharp and every visitor gets tended to right away. Customer pain points: the WordPress editor is simple, lacks consistency, doesn't allow for conversion buttons, great content but no customer contact. Posts are at the top but there are no calls or emails asking about their needs.",
   },
   "products.viewDetail": { vi: "Xem chi tiết", en: "View details" },
   "products.keyFeatures": { vi: "Tính năng nổi bật", en: "Key features" },
