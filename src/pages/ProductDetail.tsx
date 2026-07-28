@@ -10,6 +10,7 @@ import { useLanguage } from "../i18n/LanguageContext";
 import { products } from "../data/content";
 import EditorWindow from "../components/EditorWindow";
 import CtaBanner from "../components/CtaBanner";
+import { buildPlanMailto } from "../utils/mailto";
 
 const ProductDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -315,19 +316,30 @@ const ProductDetail: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                <Button
-                  block
-                  type={tier.popular ? "primary" : "default"}
-                  className={
-                    tier.popular
-                      ? product.accent === "teal"
-                        ? "btn-teal"
-                        : "btn-primary"
-                      : "btn-ghost"
-                  }
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  href={buildPlanMailto(
+                    product.name,
+                    tier.name[lang],
+                    tier.price[lang],
+                    lang,
+                  )}
                 >
-                  {t("pricing.cta")}
-                </Button>
+                  <Button
+                    block
+                    type={tier.popular ? "primary" : "default"}
+                    className={
+                      tier.popular
+                        ? product.accent === "teal"
+                          ? "btn-teal"
+                          : "btn-primary"
+                        : "btn-ghost"
+                    }
+                  >
+                    {t("pricing.cta")}
+                  </Button>
+                </a>
               </div>
             ))}
           </div>
