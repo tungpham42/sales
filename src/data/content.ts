@@ -111,11 +111,17 @@ export const products: Product[] = [
         sites: { vi: "1 tên miền", en: "1 domain" },
         bullets: [
           {
+            vi: "Đổi màu theo nhận diện thương hiệu",
+            en: "Change colors to match brand identity",
+          },
+          {
             vi: "Toàn bộ khối layout có sẵn",
             en: "Full library of layout blocks",
           },
-          { vi: "Cập nhật 1 năm", en: "1 year of updates" },
+          { vi: "Nâng cấp miễn phí trong 1 năm", en: "1 year of updates" },
           { vi: "Hỗ trợ qua email", en: "Email support" },
+          { vi: "Hướng dẫn miễn phí", en: "Free guideline" },
+          { vi: "Cài đặt miễn phí", en: "Free setup" },
         ],
       },
       {
@@ -267,11 +273,17 @@ export const products: Product[] = [
         sites: { vi: "1 tên miền", en: "1 domain" },
         bullets: [
           {
+            vi: "Đổi màu theo nhận diện thương hiệu",
+            en: "Change colors to match brand identity",
+          },
+          {
             vi: "RAG + Live Chat + Canned Responses",
             en: "RAG + Live Chat + Canned Responses",
           },
           { vi: "Form thu thập lead", en: "Pre-chat leads form" },
           { vi: "Phân tích cơ bản", en: "Core analytics" },
+          { vi: "Hướng dẫn miễn phí", en: "Free guideline" },
+          { vi: "Cài đặt miễn phí", en: "Free setup" },
         ],
       },
       {
