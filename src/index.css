@@ -12,13 +12,14 @@
   --slate-soft: #7d83a0;
   --white: #ffffff;
 
-  --font-display: "Space Grotesk", "Inter", sans-serif;
-  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: "Space Grotesk", "Montserrat", sans-serif;
+  --font-body: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: "JetBrains Mono", "SFMono-Regular", monospace;
 
   --radius-card: 16px;
   --radius-chip: 999px;
-  --shadow-card: 0 1px 2px rgba(20, 25, 43, 0.04), 0 12px 32px rgba(20, 25, 43, 0.08);
+  --shadow-card:
+    0 1px 2px rgba(20, 25, 43, 0.04), 0 12px 32px rgba(20, 25, 43, 0.08);
 }
 
 * {
