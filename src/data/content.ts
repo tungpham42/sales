@@ -131,7 +131,18 @@ export const products: Product[] = [
         sites: { vi: "5 tên miền", en: "5 domains" },
         popular: true,
         bullets: [
-          { vi: "Mọi quyền lợi gói Cá nhân", en: "Everything in Personal" },
+          {
+            vi: "Đổi màu theo nhận diện thương hiệu",
+            en: "Change colors to match brand identity",
+          },
+          {
+            vi: "Toàn bộ khối layout có sẵn",
+            en: "Full library of layout blocks",
+          },
+          { vi: "Nâng cấp miễn phí trong 1 năm", en: "1 year of updates" },
+          { vi: "Hỗ trợ qua email", en: "Email support" },
+          { vi: "Hướng dẫn miễn phí", en: "Free guideline" },
+          { vi: "Cài đặt miễn phí", en: "Free setup" },
           {
             vi: "Import/export bộ khối tuỳ biến",
             en: "Import/export custom block sets",
@@ -293,7 +304,18 @@ export const products: Product[] = [
         sites: { vi: "5 tên miền", en: "5 domains" },
         popular: true,
         bullets: [
-          { vi: "Mọi quyền lợi gói Starter", en: "Everything in Starter" },
+          {
+            vi: "Đổi màu theo nhận diện thương hiệu",
+            en: "Change colors to match brand identity",
+          },
+          {
+            vi: "RAG + Live Chat + Canned Responses",
+            en: "RAG + Live Chat + Canned Responses",
+          },
+          { vi: "Form thu thập lead", en: "Pre-chat leads form" },
+          { vi: "Phân tích cơ bản", en: "Core analytics" },
+          { vi: "Hướng dẫn miễn phí", en: "Free guideline" },
+          { vi: "Cài đặt miễn phí", en: "Free setup" },
           {
             vi: "Facebook, Zalo, Voice Chat",
             en: "Facebook, Zalo, Voice Chat",
