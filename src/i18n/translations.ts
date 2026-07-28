@@ -14,10 +14,10 @@ const dict = {
     vi: "Bộ đôi công cụ cho website WordPress",
     en: "A pair of tools for your WordPress site",
   },
-  "hero.titleLine1": { vi: "Soạn trang đẹp hơn.", en: "Write better pages." },
+  "hero.titleLine1": { vi: "Chuyển đổi tốt hơn.", en: "More conversions." },
   "hero.titleLine2": {
-    vi: "Trả lời khách nhanh hơn.",
-    en: "Answer visitors faster.",
+    vi: "Khách hàng nhiều hơn.",
+    en: "More customers.",
   },
   "hero.subtitle": {
     vi: "SOFTY Custom Layouts chèn sẵn các khối giao diện vào Classic Editor chỉ bằng vài cú nhấp chuột. AI Chatbot trực trang 24/7, hiểu nội dung website và trả lời như một nhân viên tư vấn thực thụ.",
