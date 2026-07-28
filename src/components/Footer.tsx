@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
             {t("footer.company")}
           </div>
           <FooterLink href="/#services">{t("footer.about")}</FooterLink>
-          <FooterLink href="mailto:hello@softy.dev">{t("footer.contact")}</FooterLink>
+          <FooterLink href="tel:+84368571310">{t("footer.contact")}</FooterLink>
         </div>
 
         <div>
