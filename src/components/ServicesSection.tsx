@@ -93,7 +93,7 @@ const ServicesSection: React.FC = () => {
         target="_blank"
         href="tel:+84368571310"
       >
-        <Button type="primary" size="large">
+        <Button type="primary" size="large" className="btn-primary">
           Hotline: 0368571310
         </Button>
       </a>
