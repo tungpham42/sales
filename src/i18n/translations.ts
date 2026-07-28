@@ -20,8 +20,8 @@ const dict = {
     en: "More customers.",
   },
   "hero.subtitle": {
-    vi: "SOFTY Custom Layouts chèn sẵn các khối giao diện vào Classic Editor chỉ bằng vài cú nhấp chuột. AI Chatbot trực trang 24/7, hiểu nội dung website và trả lời như một nhân viên tư vấn thực thụ.",
-    en: "SOFTY Custom Layouts drops ready-made layout blocks into your Classic Editor in a couple of clicks. AI Chatbot stays on your site around the clock, understands your content, and replies like a real advisor.",
+    vi: "SOFTY Custom Layouts chèn sẵn các khối giao diện vào Classic Editor chỉ bằng vài cú nhấp chuột vào trong trình soạn thảo bài post, product, page trên nền tảng wordpress. AI Chatbot trực trang 24/7, hiểu nội dung website và trả lời như một nhân viên tư vấn thực thụ.",
+    en: "SOFTY Custom Layouts drops ready-made layout blocks into your Classic Editor in a couple of clicks in posts, pages, products. AI Chatbot stays on your site around the clock, understands your content, and replies like a real advisor.",
   },
   "hero.ctaPrimary": { vi: "Xem SOFTY Layouts", en: "See SOFTY Layouts" },
   "hero.ctaSecondary": { vi: "Xem AI Chatbot", en: "See AI Chatbot" },
