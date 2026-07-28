@@ -106,7 +106,7 @@ export const products: Product[] = [
     pricing: [
       {
         id: "layouts-personal",
-        name: { vi: "Cá nhân", en: "Personal" },
+        name: { vi: "Gói tiêu chuẩn", en: "Standard" },
         price: { vi: "300.000đ", en: "$12" },
         sites: { vi: "1 tên miền", en: "1 domain" },
         bullets: [
@@ -126,7 +126,7 @@ export const products: Product[] = [
       },
       {
         id: "layouts-agency",
-        name: { vi: "Doanh nghiệp", en: "Business" },
+        name: { vi: "Gói cao cấp", en: "Premium" },
         price: { vi: "990.000đ", en: "$40" },
         sites: { vi: "5 tên miền", en: "5 domains" },
         popular: true,
@@ -279,7 +279,7 @@ export const products: Product[] = [
     pricing: [
       {
         id: "chatbot-starter",
-        name: { vi: "Cá nhân", en: "Personal" },
+        name: { vi: "Gói tiêu chuẩn", en: "Standard" },
         price: { vi: "300.000đ", en: "$12" },
         sites: { vi: "1 tên miền", en: "1 domain" },
         bullets: [
@@ -299,7 +299,7 @@ export const products: Product[] = [
       },
       {
         id: "chatbot-business",
-        name: { vi: "Doanh nghiệp", en: "Business" },
+        name: { vi: "Gói cao cấp", en: "Premium" },
         price: { vi: "990.000đ", en: "$40" },
         sites: { vi: "5 tên miền", en: "5 domains" },
         popular: true,
