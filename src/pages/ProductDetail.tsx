@@ -217,6 +217,22 @@ const ProductDetail: React.FC = () => {
               </div>
             ))}
           </div>
+          <a
+            style={{
+              display: "block",
+              width: "fit-content",
+              margin: "auto",
+              position: "relative",
+              bottom: "-42px",
+            }}
+            rel="noreferrer"
+            target="_blank"
+            href="tel:+84368571310"
+          >
+            <Button type="primary" size="large">
+              Hotline: 0368571310
+            </Button>
+          </a>
         </div>
       </section>
 
@@ -227,13 +243,21 @@ const ProductDetail: React.FC = () => {
           </div>
           <div
             className="pricing-grid"
-            style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: 20,
+              alignItems: "stretch", // Added to stretch cards to identical heights
+            }}
           >
             {product.pricing.map((tier) => (
               <div
                 key={tier.id}
                 style={{
                   position: "relative",
+                  display: "flex", // Added Flexbox layout
+                  flexDirection: "column", // Stack contents vertically
+                  height: "100%", // Stretch card to fill the grid cell
                   background: "var(--white)",
                   border: tier.popular
                     ? `1.5px solid ${accentVar}`
@@ -316,30 +340,52 @@ const ProductDetail: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  href={buildPlanMailto(
-                    product.name,
-                    tier.name[lang],
-                    tier.price[lang],
-                    lang,
-                  )}
-                >
-                  <Button
-                    block
-                    type={tier.popular ? "primary" : "default"}
-                    className={
-                      tier.popular
-                        ? product.accent === "teal"
-                          ? "btn-teal"
-                          : "btn-primary"
-                        : "btn-ghost"
-                    }
+
+                {/* Updated button container with side-by-side flex layout */}
+                <div style={{ marginTop: "auto", display: "flex", gap: 10 }}>
+                  <a
+                    rel="noreferrer"
+                    target="_blank"
+                    href={buildPlanMailto(
+                      product.name,
+                      tier.name[lang],
+                      tier.price[lang],
+                      lang,
+                    )}
+                    style={{ flex: 1 }}
                   >
-                    {t("pricing.cta")}
-                  </Button>
-                </a>
+                    <Button
+                      block
+                      type={tier.popular ? "primary" : "default"}
+                      className={
+                        tier.popular
+                          ? product.accent === "teal"
+                            ? "btn-teal"
+                            : "btn-primary"
+                          : "btn-ghost"
+                      }
+                    >
+                      {t("pricing.cta")}
+                    </Button>
+                  </a>
+
+                  {/* Contact Hotline Button */}
+                  <a
+                    rel="noreferrer"
+                    target="_blank"
+                    href="tel:+84368571310"
+                    style={{ flex: 1 }}
+                  >
+                    <Button
+                      size="large"
+                      block
+                      type="default"
+                      className="btn-ghost"
+                    >
+                      {t("pricing.contact")}
+                    </Button>
+                  </a>
+                </div>
               </div>
             ))}
           </div>

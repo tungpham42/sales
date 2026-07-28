@@ -5,10 +5,16 @@ import {
   ThunderboltOutlined,
   ApiOutlined,
 } from "@ant-design/icons";
+import { Button } from "antd";
 import { useLanguage } from "../i18n/LanguageContext";
 import { services } from "../data/content";
 
-const icons = [CodeOutlined, BgColorsOutlined, ThunderboltOutlined, ApiOutlined];
+const icons = [
+  CodeOutlined,
+  BgColorsOutlined,
+  ThunderboltOutlined,
+  ApiOutlined,
+];
 
 const ServicesSection: React.FC = () => {
   const { t, lang } = useLanguage();
@@ -24,7 +30,11 @@ const ServicesSection: React.FC = () => {
 
         <div
           className="services-grid"
-          style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20 }}
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(4, 1fr)",
+            gap: 20,
+          }}
         >
           {services.map((service, i) => {
             const Icon = icons[i];
@@ -56,7 +66,14 @@ const ServicesSection: React.FC = () => {
                 <h4 style={{ fontSize: 16.5, marginTop: 16, lineHeight: 1.35 }}>
                   {service.title[lang]}
                 </h4>
-                <p style={{ marginTop: 8, fontSize: 14, lineHeight: 1.6, color: "var(--slate-soft)" }}>
+                <p
+                  style={{
+                    marginTop: 8,
+                    fontSize: 14,
+                    lineHeight: 1.6,
+                    color: "var(--slate-soft)",
+                  }}
+                >
                   {service.desc[lang]}
                 </p>
               </div>
@@ -64,6 +81,22 @@ const ServicesSection: React.FC = () => {
           })}
         </div>
       </div>
+      <a
+        style={{
+          display: "block",
+          width: "fit-content",
+          margin: "auto",
+          position: "relative",
+          bottom: "-42px",
+        }}
+        rel="noreferrer"
+        target="_blank"
+        href="tel:+84368571310"
+      >
+        <Button type="primary" size="large">
+          Hotline: 0368571310
+        </Button>
+      </a>
 
       <style>{`
         @media (max-width: 1000px) {

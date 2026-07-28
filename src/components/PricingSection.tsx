@@ -33,6 +33,7 @@ const PricingSection: React.FC = () => {
                   display: "grid",
                   gridTemplateColumns: "1fr 1fr",
                   gap: 20,
+                  alignItems: "stretch", // Ensures cards in the same row are equal height
                 }}
               >
                 {product.pricing.map((tier) => (
@@ -40,12 +41,15 @@ const PricingSection: React.FC = () => {
                     key={tier.id}
                     style={{
                       position: "relative",
+                      display: "flex", // Added flex layout
+                      flexDirection: "column", // Stack items vertically
                       background: "var(--white)",
                       border: tier.popular
                         ? `1.5px solid ${accentVar}`
                         : "1px solid var(--line)",
                       borderRadius: "var(--radius-card)",
                       padding: 28,
+                      height: "100%", // Stretch to fill grid cell
                     }}
                   >
                     {tier.popular && (
@@ -129,30 +133,54 @@ const PricingSection: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-                    <a
-                      rel="noreferrer"
-                      target="_blank"
-                      href={buildPlanMailto(
-                        product.name,
-                        tier.name[lang],
-                        tier.price[lang],
-                        lang,
-                      )}
+
+                    {/* Updated button container with flex layout side-by-side */}
+                    <div
+                      style={{ marginTop: "auto", display: "flex", gap: 10 }}
                     >
-                      <Button
-                        block
-                        type={tier.popular ? "primary" : "default"}
-                        className={
-                          tier.popular
-                            ? product.accent === "teal"
-                              ? "btn-teal"
-                              : "btn-primary"
-                            : "btn-ghost"
-                        }
+                      <a
+                        rel="noreferrer"
+                        target="_blank"
+                        href={buildPlanMailto(
+                          product.name,
+                          tier.name[lang],
+                          tier.price[lang],
+                          lang,
+                        )}
+                        style={{ flex: 1 }}
                       >
-                        {t("pricing.cta")}
-                      </Button>
-                    </a>
+                        <Button
+                          block
+                          type={tier.popular ? "primary" : "default"}
+                          className={
+                            tier.popular
+                              ? product.accent === "teal"
+                                ? "btn-teal"
+                                : "btn-primary"
+                              : "btn-ghost"
+                          }
+                        >
+                          {t("pricing.cta")}
+                        </Button>
+                      </a>
+
+                      {/* Added Contact Hotline Button */}
+                      <a
+                        rel="noreferrer"
+                        target="_blank"
+                        href="tel:+84368571310"
+                        style={{ flex: 1 }}
+                      >
+                        <Button
+                          size="large"
+                          block
+                          type="default"
+                          className="btn-ghost"
+                        >
+                          {t("pricing.contact")}
+                        </Button>
+                      </a>
+                    </div>
                   </div>
                 ))}
               </div>

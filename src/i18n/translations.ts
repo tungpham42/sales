@@ -50,8 +50,8 @@ const dict = {
     en: "Each product solves one real bottleneck",
   },
   "products.subtitle": {
-    vi: "Dùng riêng lẻ hoặc kết hợp cả hai để trang nội dung đẹp hơn và khách ghé thăm được chăm sóc ngay lập tức. Làm SEO Google, viết content mà: trình soạn thảo WordPress đơn giản, thiếu tính nhất quán, không tạo được các button chuyển đổi, nội dung hay nhưng khách hàng không liên hệ. Bài viết trên cùng nhưng không có cuộc gọi, email hỏi nhu cầu.",
-    en: "Use them on their own or together, so your content looks sharp and every visitor gets tended to right away. Customer pain points: the WordPress editor is simple, lacks consistency, doesn't allow for conversion buttons, great content but no customer contact. Posts are at the top but there are no calls or emails asking about their needs.",
+    vi: "Dùng riêng lẻ hoặc kết hợp cả hai để trang nội dung đẹp hơn và khách ghé thăm được chăm sóc ngay lập tức. Làm SEO Google, viết content mà trình soạn thảo WordPress đơn giản, thiếu tính nhất quán, không tạo được các button chuyển đổi, nội dung hay nhưng khách hàng không liên hệ. Bài viết lên trang nhất nhưng không có cuộc gọi, email hỏi nhu cầu.",
+    en: "Use them on their own or together, so your content looks sharp and every visitor gets tended to right away. Customer pain points are the WordPress editor is simple, lacks consistency, doesn't allow for conversion buttons, great content but no customer contact. Posts are at the top but there are no calls or emails asking about their needs.",
   },
   "products.viewDetail": { vi: "Xem chi tiết", en: "View details" },
   "products.keyFeatures": { vi: "Tính năng nổi bật", en: "Key features" },
@@ -79,6 +79,7 @@ const dict = {
   "pricing.perSite": { vi: "1 tên miền", en: "1 domain" },
   "pricing.mostPopular": { vi: "Được chọn nhiều nhất", en: "Most popular" },
   "pricing.cta": { vi: "Chọn gói này", en: "Choose plan" },
+  "pricing.contact": { vi: "Liên hệ tư vấn", en: "Contact" },
 
   "testimonials.eyebrow": { vi: "Người dùng nói gì", en: "What users say" },
   "testimonials.title": {
