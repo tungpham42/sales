@@ -43,7 +43,18 @@ const dict = {
     vi: "Chào bạn, mình cần tìm gì hôm nay?",
     en: "Hi there, what can I help you find?",
   },
-
+  "hero.statSetupValue": { vi: "5 phút", en: "5 min" },
+  "hero.statSetupLabel": { vi: "Thời gian cài đặt", en: "To get set up" },
+  "hero.statSupportValue": { vi: "24/7", en: "24/7" },
+  "hero.statSupportLabel": {
+    vi: "AI trực trang hỗ trợ",
+    en: "On-site AI support",
+  },
+  "hero.statTrialValue": { vi: "14 ngày", en: "14 days" },
+  "hero.statTrialLabel": {
+    vi: "Dùng thử miễn phí",
+    en: "Free, full-feature trial",
+  },
   "products.eyebrow": { vi: "Hai sản phẩm chính", en: "Two flagship products" },
   "products.title": {
     vi: "Mỗi sản phẩm giải quyết một điểm nghẽn thực tế",

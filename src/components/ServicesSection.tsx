@@ -8,12 +8,19 @@ import {
 import { Button } from "antd";
 import { useLanguage } from "../i18n/LanguageContext";
 import { services } from "../data/content";
+import Reveal from "./Reveal";
 
 const icons = [
   CodeOutlined,
   BgColorsOutlined,
   ThunderboltOutlined,
   ApiOutlined,
+];
+const accents = [
+  "var(--grad-indigo)",
+  "var(--grad-teal)",
+  "var(--grad-indigo)",
+  "var(--grad-teal)",
 ];
 
 const ServicesSection: React.FC = () => {
@@ -22,12 +29,13 @@ const ServicesSection: React.FC = () => {
   return (
     <section id="services" className="section section--alt">
       <div className="container">
-        <div className="section-heading">
-          <span className="eyebrow">{t("services.eyebrow")}</span>
-          <h2>{t("services.title")}</h2>
-          <p>{t("services.subtitle")}</p>
-        </div>
-
+        <Reveal>
+          <div className="section-heading">
+            <span className="eyebrow">{t("services.eyebrow")}</span>
+            <h2>{t("services.title")}</h2>
+            <p>{t("services.subtitle")}</p>
+          </div>
+        </Reveal>
         <div
           className="services-grid"
           style={{
@@ -39,64 +47,71 @@ const ServicesSection: React.FC = () => {
           {services.map((service, i) => {
             const Icon = icons[i];
             return (
-              <div
-                key={service.title[lang]}
-                style={{
-                  background: "var(--white)",
-                  border: "1px solid var(--line)",
-                  borderRadius: "var(--radius-card)",
-                  padding: 24,
-                }}
-              >
-                <span
+              <Reveal key={service.title[lang]} delay={i * 100}>
+                <div
+                  className="hover-lift"
                   style={{
-                    width: 40,
-                    height: 40,
-                    borderRadius: 10,
-                    background: "var(--paper-dim)",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    color: "var(--indigo)",
-                    fontSize: 18,
+                    background: "var(--white)",
+                    border: "1px solid var(--line)",
+                    borderRadius: "var(--radius-card)",
+                    padding: 26,
+                    height: "100%",
                   }}
                 >
-                  <Icon />
-                </span>
-                <h4 style={{ fontSize: 16.5, marginTop: 16, lineHeight: 1.35 }}>
-                  {service.title[lang]}
-                </h4>
-                <p
-                  style={{
-                    marginTop: 8,
-                    fontSize: 14,
-                    lineHeight: 1.6,
-                    color: "var(--slate-soft)",
-                  }}
-                >
-                  {service.desc[lang]}
-                </p>
-              </div>
+                  <span
+                    style={{
+                      width: 44,
+                      height: 44,
+                      borderRadius: 12,
+                      background: accents[i],
+                      display: "inline-flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      color: "#fff",
+                      fontSize: 19,
+                      boxShadow: "0 8px 18px rgba(20,25,43,0.16)",
+                    }}
+                  >
+                    <Icon />
+                  </span>
+                  <h4
+                    style={{ fontSize: 16.5, marginTop: 18, lineHeight: 1.35 }}
+                  >
+                    {service.title[lang]}
+                  </h4>
+                  <p
+                    style={{
+                      marginTop: 8,
+                      fontSize: 14,
+                      lineHeight: 1.6,
+                      color: "var(--slate-soft)",
+                    }}
+                  >
+                    {service.desc[lang]}
+                  </p>
+                </div>
+              </Reveal>
             );
           })}
         </div>
+        <a
+          style={{
+            display: "block",
+            width: "fit-content",
+            margin: "auto",
+            position: "relative",
+            bottom: "-42px",
+          }}
+          rel="noreferrer"
+          target="_blank"
+          href="tel:+84368571310"
+        >
+          <Button type="primary" size="large" className="btn-primary">
+            Hotline: 0368571310
+          </Button>
+        </a>
+        ;
       </div>
-      <a
-        style={{
-          display: "block",
-          width: "fit-content",
-          margin: "auto",
-          position: "relative",
-          bottom: "-42px",
-        }}
-        rel="noreferrer"
-        target="_blank"
-        href="tel:+84368571310"
-      >
-        <Button type="primary" size="large" className="btn-primary">
-          Hotline: 0368571310
-        </Button>
-      </a>
 
       <style>{`
         @media (max-width: 1000px) {

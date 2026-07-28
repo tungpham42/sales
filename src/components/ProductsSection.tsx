@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "../i18n/LanguageContext";
 import { products } from "../data/content";
 import EditorWindow from "./EditorWindow";
+import Reveal from "./Reveal";
 
 const ProductsSection: React.FC = () => {
   const { t, lang } = useLanguage();
@@ -12,34 +13,43 @@ const ProductsSection: React.FC = () => {
   return (
     <section id="products" className="section">
       <div className="container">
-        <div className="section-heading">
-          <span className="eyebrow">{t("products.eyebrow")}</span>
-          <h2>{t("products.title")}</h2>
-          <p>{t("products.subtitle")}</p>
-        </div>
+        <Reveal>
+          <div className="section-heading">
+            <span className="eyebrow">{t("products.eyebrow")}</span>
+            <h2>{t("products.title")}</h2>
+            <p>{t("products.subtitle")}</p>
+          </div>
+        </Reveal>
 
         <div
           className="products-grid"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: 28,
-            alignItems: "stretch", // Ensures equal height grid items
-          }}
+          style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 28 }}
         >
-          {products.map((product) => {
+          {products.map((product, idx) => {
             const accentVar =
               product.accent === "indigo" ? "var(--indigo)" : "var(--teal)";
+            const gradVar =
+              product.accent === "indigo"
+                ? "var(--grad-indigo)"
+                : "var(--grad-teal)";
+            const glowClass =
+              product.accent === "indigo"
+                ? "editor-window--glow-indigo"
+                : "editor-window--glow-teal";
+
             return (
-              <EditorWindow key={product.slug} tab={product.windowTab}>
-                {/* Flex wrapper to push the button to the bottom */}
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    height: "100%",
-                  }}
+              <Reveal key={product.slug} delay={idx * 120}>
+                <EditorWindow
+                  tab={product.windowTab}
+                  className={`editor-window--hover ${glowClass}`}
                 >
+                  <div
+                    style={{
+                      height: 4,
+                      margin: "-26px -26px 22px",
+                      background: gradVar,
+                    }}
+                  />
                   <span
                     className="eyebrow"
                     style={
@@ -56,7 +66,7 @@ const ProductsSection: React.FC = () => {
                       ? "AI Chat Widget"
                       : "TinyMCE add-on"}
                   </span>
-                  <h3 style={{ fontSize: 22, marginTop: 14, lineHeight: 1.3 }}>
+                  <h3 style={{ fontSize: 23, marginTop: 14, lineHeight: 1.3 }}>
                     {product.name}
                   </h3>
                   <p
@@ -85,7 +95,7 @@ const ProductsSection: React.FC = () => {
                     ))}
                   </div>
 
-                  <div style={{ marginTop: 22, marginBottom: 24 }}>
+                  <div style={{ marginTop: 22 }}>
                     <span
                       className="mono"
                       style={{
@@ -114,20 +124,35 @@ const ProductsSection: React.FC = () => {
                             fontSize: 14.5,
                           }}
                         >
-                          <CheckOutlined
-                            style={{ color: accentVar, marginTop: 3 }}
-                          />
+                          <span
+                            style={{
+                              width: 20,
+                              height: 20,
+                              borderRadius: "50%",
+                              background:
+                                product.accent === "teal"
+                                  ? "rgba(43,184,163,0.14)"
+                                  : "rgba(59,76,202,0.1)",
+                              display: "inline-flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              flexShrink: 0,
+                              marginTop: 1,
+                            }}
+                          >
+                            <CheckOutlined
+                              style={{ color: accentVar, fontSize: 11 }}
+                            />
+                          </span>
                           <span>{f.title[lang]}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <Link
-                    to={`/products/${product.slug}`}
-                    style={{ marginTop: "auto", display: "inline-block" }} // Auto margin pushes this down
-                  >
+                  <Link to={`/products/${product.slug}`}>
                     <Button
+                      style={{ marginTop: 8 }}
                       className={
                         product.accent === "teal" ? "btn-teal" : "btn-primary"
                       }
@@ -138,8 +163,8 @@ const ProductsSection: React.FC = () => {
                       {t("products.viewDetail")}
                     </Button>
                   </Link>
-                </div>
-              </EditorWindow>
+                </EditorWindow>
+              </Reveal>
             );
           })}
         </div>
