@@ -69,7 +69,7 @@ const Header: React.FC = () => {
             <a
               key={item.key}
               href={item.hash}
-              style={{ fontSize: 14, fontWeight: 500, color: "var(--slate)" }}
+              style={{ fontSize: 16, fontWeight: 500, color: "var(--slate)" }}
             >
               {t(item.key as any)}
             </a>
