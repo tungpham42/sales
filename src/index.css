@@ -461,3 +461,7 @@ button,
     transform: none !important;
   }
 }
+
+.btn-ghost.ant-btn.btn-contact:hover {
+  border-color: #e11d48 !important;
+}

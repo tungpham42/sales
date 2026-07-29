@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "antd";
-import { CheckOutlined } from "@ant-design/icons";
+import { CheckOutlined, PhoneOutlined } from "@ant-design/icons";
 import { useLanguage } from "../i18n/LanguageContext";
 import { products } from "../data/content";
 import { buildPlanMailto } from "../utils/mailto";
@@ -46,7 +46,7 @@ const PricingSection: React.FC = () => {
                 }}
               >
                 {product.pricing.map((tier, tIdx) => (
-                  <Reveal key={tier.id} delay={pIdx * 60 + tIdx * 120}>
+                  <Reveal key={tier.id} delay={tIdx * 120}>
                     <div
                       key={tier.id}
                       className="hover-lift"
@@ -145,10 +145,8 @@ const PricingSection: React.FC = () => {
                         ))}
                       </ul>
 
-                      {/* Updated button container with flex layout side-by-side */}
-                      <div
-                        style={{ marginTop: "auto", display: "flex", gap: 10 }}
-                      >
+                      {/* Added a class here for responsive targeting */}
+                      <div className="pricing-buttons">
                         <a
                           rel="noreferrer"
                           target="_blank"
@@ -161,6 +159,7 @@ const PricingSection: React.FC = () => {
                           style={{ flex: 1 }}
                         >
                           <Button
+                            size="large" // Added size="large" to match the Contact button height
                             block
                             type={tier.popular ? "primary" : "default"}
                             className={
@@ -175,7 +174,7 @@ const PricingSection: React.FC = () => {
                           </Button>
                         </a>
 
-                        {/* Added Contact Hotline Button */}
+                        {/* Contact Hotline Button */}
                         <a
                           rel="noreferrer"
                           target="_blank"
@@ -186,9 +185,12 @@ const PricingSection: React.FC = () => {
                             size="large"
                             block
                             type="default"
-                            className="btn-ghost"
+                            className="btn-ghost btn-contact"
                           >
-                            {t("pricing.contact")}
+                            <PhoneOutlined style={{ color: "#E11D48" }} />
+                            <span style={{ color: "#E11D48" }}>
+                              {t("pricing.contact")}
+                            </span>
                           </Button>
                         </a>
                       </div>
@@ -202,9 +204,24 @@ const PricingSection: React.FC = () => {
       </div>
 
       <style>{`
-        @media (max-width: 700px) {
+        /* Default layout for buttons (desktop / tablet) */
+        .pricing-buttons {
+          margin-top: auto;
+          display: flex;
+          gap: 10px;
+        }
+
+        /* Stack cards into a single column on tablet/mobile */
+        @media (max-width: 900px) {
           .pricing-grid {
             grid-template-columns: 1fr !important;
+          }
+        }
+
+        /* Stack buttons vertically on small mobile devices to prevent overflow */
+        @media (max-width: 480px) {
+          .pricing-buttons {
+            flex-direction: column;
           }
         }
       `}</style>

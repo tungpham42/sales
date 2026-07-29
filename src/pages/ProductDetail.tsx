@@ -5,6 +5,7 @@ import {
   ArrowLeftOutlined,
   ArrowRightOutlined,
   CheckOutlined,
+  PhoneOutlined,
 } from "@ant-design/icons";
 import { useLanguage } from "../i18n/LanguageContext";
 import { products } from "../data/content";
@@ -385,9 +386,12 @@ const ProductDetail: React.FC = () => {
                         size="large"
                         block
                         type="default"
-                        className="btn-ghost"
+                        className="btn-ghost btn-contact"
                       >
-                        {t("pricing.contact")}
+                        <PhoneOutlined style={{ color: "#E11D48" }} />
+                        <span style={{ color: "#E11D48" }}>
+                          {t("pricing.contact")}
+                        </span>
                       </Button>
                     </a>
                   </div>
