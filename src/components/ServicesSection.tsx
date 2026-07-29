@@ -5,10 +5,10 @@ import {
   ThunderboltOutlined,
   ApiOutlined,
 } from "@ant-design/icons";
-import { Button } from "antd";
 import { useLanguage } from "../i18n/LanguageContext";
 import { services } from "../data/content";
 import Reveal from "./Reveal";
+import HotlineButton from "./HotlineButton";
 
 const icons = [
   CodeOutlined,
@@ -94,23 +94,7 @@ const ServicesSection: React.FC = () => {
             );
           })}
         </div>
-        <a
-          style={{
-            display: "block",
-            width: "fit-content",
-            margin: "auto",
-            position: "relative",
-            bottom: "-42px",
-          }}
-          rel="noreferrer"
-          target="_blank"
-          href="tel:+84368571310"
-        >
-          <Button type="primary" size="large" className="btn-primary">
-            Hotline: 0368571310
-          </Button>
-        </a>
-        ;
+        <HotlineButton />;
       </div>
 
       <style>{`

@@ -11,6 +11,7 @@ import { products } from "../data/content";
 import EditorWindow from "../components/EditorWindow";
 import CtaBanner from "../components/CtaBanner";
 import Reveal from "../components/Reveal";
+import HotlineButton from "../components/HotlineButton";
 import { buildPlanMailto } from "../utils/mailto";
 
 const ProductDetail: React.FC = () => {
@@ -228,22 +229,7 @@ const ProductDetail: React.FC = () => {
               </Reveal>
             ))}
           </div>
-          <a
-            style={{
-              display: "block",
-              width: "fit-content",
-              margin: "auto",
-              position: "relative",
-              bottom: "-42px",
-            }}
-            rel="noreferrer"
-            target="_blank"
-            href="tel:+84368571310"
-          >
-            <Button type="primary" size="large" className="btn-primary">
-              Hotline: 0368571310
-            </Button>
-          </a>
+          <HotlineButton />
         </div>
       </section>
 
