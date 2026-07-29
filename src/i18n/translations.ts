@@ -90,7 +90,7 @@ const dict = {
   "pricing.perSite": { vi: "1 tên miền", en: "1 domain" },
   "pricing.mostPopular": { vi: "Được chọn nhiều nhất", en: "Most popular" },
   "pricing.cta": { vi: "Chọn gói này", en: "Choose plan" },
-  "pricing.contact": { vi: "Liên hệ tư vấn", en: "Contact" },
+  "pricing.contact": { vi: "Liên hệ: 0368571310", en: "Contact: 0368571310" },
 
   "testimonials.eyebrow": { vi: "Người dùng nói gì", en: "What users say" },
   "testimonials.title": {
