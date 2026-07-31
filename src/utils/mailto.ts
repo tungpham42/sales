@@ -10,7 +10,7 @@ export function buildPlanMailto(
   productName: string,
   tierName: string,
   price: string,
-  lang: Language
+  lang: Language,
 ): string {
   const subject =
     lang === "vi"

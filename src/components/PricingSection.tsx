@@ -148,8 +148,6 @@ const PricingSection: React.FC = () => {
                       {/* Added a class here for responsive targeting */}
                       <div className="pricing-buttons">
                         <a
-                          rel="noreferrer"
-                          target="_blank"
                           href={buildPlanMailto(
                             product.name,
                             tier.name[lang],

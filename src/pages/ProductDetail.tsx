@@ -348,8 +348,6 @@ const ProductDetail: React.FC = () => {
                   {/* Updated button container with side-by-side flex layout */}
                   <div style={{ marginTop: "auto", display: "flex", gap: 10 }}>
                     <a
-                      rel="noreferrer"
-                      target="_blank"
                       href={buildPlanMailto(
                         product.name,
                         tier.name[lang],
