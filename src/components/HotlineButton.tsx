@@ -13,7 +13,7 @@ const HotlineButton: React.FC = () => {
       }}
       rel="noreferrer"
       target="_blank"
-      href="tel:+84368571310"
+      href="zalo:0368571310"
     >
       <Button type="primary" size="large" className="btn-primary">
         Hotline: 0368571310
