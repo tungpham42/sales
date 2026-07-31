@@ -94,7 +94,7 @@ const ServicesSection: React.FC = () => {
             );
           })}
         </div>
-        <HotlineButton />;
+        <HotlineButton />
       </div>
 
       <style>{`
