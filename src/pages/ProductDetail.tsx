@@ -230,7 +230,6 @@ const ProductDetail: React.FC = () => {
               </Reveal>
             ))}
           </div>
-          <HotlineButton />
         </div>
       </section>
 
