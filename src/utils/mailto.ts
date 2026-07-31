@@ -1,6 +1,7 @@
 import { Language } from "../i18n/LanguageContext";
 
 const SALES_EMAIL = "soft.io.vn@gmail.com";
+const CC_EMAIL = "tung.42@gmail.com";
 
 /**
  * Builds a mailto: link that opens the user's email client with a
@@ -22,6 +23,11 @@ export function buildPlanMailto(
       ? `Chào SOFTY,\n\nTôi muốn tìm hiểu thêm về gói ${tierName} (${price}/năm) của ${productName}.\n\nCảm ơn!`
       : `Hi SOFTY team,\n\nI'd like to learn more about the ${tierName} plan (${price}/year) for ${productName}.\n\nThanks!`;
 
-  const params = new URLSearchParams({ subject, body });
+  const params = new URLSearchParams({
+    subject,
+    body,
+    cc: CC_EMAIL,
+  });
+
   return `mailto:${SALES_EMAIL}?${params.toString().replace(/\+/g, "%20")}`;
 }
