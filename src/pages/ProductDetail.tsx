@@ -377,7 +377,7 @@ const ProductDetail: React.FC = () => {
                     <a
                       rel="noreferrer"
                       target="_blank"
-                      href="zalo:0368571310"
+                      href="tel:+84368571310"
                       style={{ flex: 1 }}
                     >
                       <Button
