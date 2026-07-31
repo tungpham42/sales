@@ -88,7 +88,7 @@ const Footer: React.FC = () => {
           <FooterLink href="mailto:soft.io.vn@gmail.com">
             {t("footer.contact")}
           </FooterLink>
-          <FooterLink href="zalo:0368571310">Hotline: 0368571310</FooterLink>
+          <FooterLink href="tel:+84368571310">Hotline: 0368571310</FooterLink>
         </div>
 
         <div>
