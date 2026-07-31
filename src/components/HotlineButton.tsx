@@ -8,8 +8,6 @@ const HotlineButton: React.FC = () => {
         display: "block",
         width: "fit-content",
         margin: "auto",
-        position: "relative",
-        bottom: "-60px",
       }}
       rel="noreferrer"
       target="_blank"
