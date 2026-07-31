@@ -12,7 +12,6 @@ import { products } from "../data/content";
 import EditorWindow from "../components/EditorWindow";
 import CtaBanner from "../components/CtaBanner";
 import Reveal from "../components/Reveal";
-import HotlineButton from "../components/HotlineButton";
 import { buildPlanMailto } from "../utils/mailto";
 
 const ProductDetail: React.FC = () => {
