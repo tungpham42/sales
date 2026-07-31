@@ -178,7 +178,7 @@ const PricingSection: React.FC = () => {
                         <a
                           rel="noreferrer"
                           target="_blank"
-                          href="zalo:0973404088"
+                          href="tel:+84368571310"
                           style={{ flex: 1 }}
                         >
                           <Button
