@@ -8,7 +8,6 @@ import {
 import { useLanguage } from "../i18n/LanguageContext";
 import { services } from "../data/content";
 import Reveal from "./Reveal";
-import HotlineButton from "./HotlineButton";
 
 const icons = [
   CodeOutlined,
@@ -94,7 +93,6 @@ const ServicesSection: React.FC = () => {
             );
           })}
         </div>
-        <HotlineButton />
       </div>
 
       <style>{`
