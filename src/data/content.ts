@@ -127,7 +127,7 @@ export const products: Product[] = [
       {
         id: "layouts-agency",
         name: { vi: "Gói cao cấp", en: "Premium" },
-        price: { vi: "990.000đ", en: "$40" },
+        price: { vi: "999.000đ", en: "$40" },
         sites: { vi: "5 tên miền", en: "5 domains" },
         popular: true,
         bullets: [
@@ -300,7 +300,7 @@ export const products: Product[] = [
       {
         id: "chatbot-business",
         name: { vi: "Gói cao cấp", en: "Premium" },
-        price: { vi: "990.000đ", en: "$40" },
+        price: { vi: "999.000đ", en: "$40" },
         sites: { vi: "5 tên miền", en: "5 domains" },
         popular: true,
         bullets: [
