@@ -45,6 +45,8 @@ const ProductDetail: React.FC = () => {
     product.accent === "indigo"
       ? "/downloads/softy-layouts.zip"
       : "/downloads/soft-ai-chat.zip";
+  const demoVideoId =
+    product.accent === "indigo" ? "f79hTkjFcXg" : "5oWpQJHCico";
 
   return (
     <>
@@ -156,6 +158,44 @@ const ProductDetail: React.FC = () => {
                 </div>
               </EditorWindow>
             </Reveal>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <Reveal>
+            <div className="section-heading">
+              <h2>{lang === "vi" ? "Video Demo" : "Demo Video"}</h2>
+            </div>
+          </Reveal>
+          <div
+            style={{
+              position: "relative",
+              width: "100%",
+              maxWidth: 860,
+              margin: "0 auto",
+              aspectRatio: "16 / 9",
+              borderRadius: "var(--radius-card)",
+              overflow: "hidden",
+              border: "1px solid var(--line)",
+              boxShadow: "0 12px 32px rgba(15, 23, 42, 0.08)",
+            }}
+          >
+            <iframe
+              src={`https://www.youtube.com/embed/${demoVideoId}`}
+              title={`${product.name} demo video`}
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                border: 0,
+              }}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
           </div>
         </div>
       </section>
