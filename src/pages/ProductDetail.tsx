@@ -41,6 +41,10 @@ const ProductDetail: React.FC = () => {
 
   const accentVar =
     product.accent === "indigo" ? "var(--indigo)" : "var(--teal)";
+  const demoZip =
+    product.accent === "indigo"
+      ? "/downloads/softy-layouts.zip"
+      : "/downloads/soft-ai-chat.zip";
 
   return (
     <>
@@ -96,7 +100,7 @@ const ProductDetail: React.FC = () => {
                 <p style={{ marginTop: 18, fontSize: 15, lineHeight: 1.75 }}>
                   {product.summary[lang]}
                 </p>
-                <a href="#pricing-detail">
+                <a href={demoZip} download>
                   <Button
                     size="large"
                     type="primary"
