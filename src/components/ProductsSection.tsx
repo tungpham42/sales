@@ -36,6 +36,10 @@ const ProductsSection: React.FC = () => {
               product.accent === "indigo"
                 ? "editor-window--glow-indigo"
                 : "editor-window--glow-teal";
+            const demoZip =
+              product.accent === "indigo"
+                ? "/downloads/softy-layouts.zip"
+                : "/downloads/soft-ai-chat.zip";
 
             return (
               <Reveal key={product.slug} delay={idx * 120}>
@@ -150,19 +154,36 @@ const ProductsSection: React.FC = () => {
                     </ul>
                   </div>
 
-                  <Link to={`/products/${product.slug}`}>
-                    <Button
-                      style={{ marginTop: 8 }}
-                      className={
-                        product.accent === "teal" ? "btn-teal" : "btn-primary"
-                      }
-                      type="primary"
-                      icon={<ArrowRightOutlined />}
-                      iconPosition="end"
-                    >
-                      {t("products.viewDetail")}
-                    </Button>
-                  </Link>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexWrap: "wrap",
+                      gap: 12,
+                      marginTop: 8,
+                    }}
+                  >
+                    <Link to={`/products/${product.slug}`}>
+                      <Button
+                        className={
+                          product.accent === "teal" ? "btn-teal" : "btn-primary"
+                        }
+                        type="primary"
+                        icon={<ArrowRightOutlined />}
+                        iconPosition="end"
+                      >
+                        {t("products.viewDetail")}
+                      </Button>
+                    </Link>
+                    <a href={demoZip} download>
+                      <Button
+                        className="btn-ghost"
+                        ghost={false}
+                        type="default"
+                      >
+                        Demo Plugin
+                      </Button>
+                    </a>
+                  </div>
                 </EditorWindow>
               </Reveal>
             );
